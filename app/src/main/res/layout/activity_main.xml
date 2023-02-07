@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:visibility="visible"
+        tools:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+     <TextView
+         android:text="something went wrong"
+         android:visibility="gone"
+         android:textColor="@color/white"
+         android:id="@+id/errorTextView"
+         android:gravity="center"
+         android:background="@color/purple_500"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:hint="@string/input_a_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editText"
+            android:maxLength="10"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:enabled="false"
+        android:layout_margin="@dimen/margin_small"
+        android:text="@string/get_fact"
+        android:id="@+id/getFactButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:layout_margin="@dimen/margin_small"
+        android:text="@string/get_random_fact"
+        android:id="@+id/getRandomButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/historyRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+</LinearLayout>
